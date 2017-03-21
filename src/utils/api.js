@@ -9,8 +9,8 @@ import * as request from 'request-promise'
 
 export const ENDPOINTS = {
 
-    WEATHER_API_URL: 'http://api.apixu.com/v1/current.json',
-    PIXABAY_API_URL: 'https://pixabay.com/api/'
+    ARTICLES_API_URL: 'https://newsapi.org/v1/articles?source=techcrunch&apiKey=ce6cad62125a42a287f01756bf17b3c4' 
+   
 
 }
 

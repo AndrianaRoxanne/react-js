@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 
-import './WeatherCard.css'
+import './NewsCard.css'
 
-class WeatherCard extends Component {
+class NewsCard extends Component {
 
     render() {
 
-        const { locationName, temperature, weatherConditionText, weatherConditionIcon, windSpeed, picture } = this.props
+        const { author, description, title , url  ,urlToImage , publishedAt } = this.props
 
         return (
             <div className="card horizontal" style={ { margin: 'auto' } }>
                 <div className="card-image weather-img-container">
-                    <img alt="city" className="weather-img" src={ picture } />
+                    
                     <span className="card-title" style={ { fontSize: 36 } }>
-                        { temperature } °C
+                        { title } 
                     </span>
                 </div>
                 <div className="card-stacked">
@@ -22,19 +22,26 @@ class WeatherCard extends Component {
                         <div className="weather-data">
                             <p>
                                 <i className="material-icons">info</i>
-                                <span>{ weatherConditionText }</span>
+                                <span>{ author }</span>
                             </p>
                             <p>
                                 <i className="material-icons">flag</i>
-                                <span>{ windSpeed } kph</span>
+                                <span>{ description} </span>
+
+                                 <p>
+                                <i className="material-icons">flag</i>
+                                <span>{ url} </span>
+                                 <p>
+                                <i className="material-icons">flag</i>
+                                <span>{urlToImage} </span>
+                            </p>
+                            </p>
                             </p>
                         </div>
 
-                        <img alt="icon" className="weather-icon" src={ weatherConditionIcon } />
+                        <img alt="icon" className="weather-icon" src={ publishedAt } />
                     </div>
-                    <div className="card-action center-align">
-                        <a className="weather-city" href="#" onClick={ e => e.preventDefault() }>{ locationName }</a>
-                    </div>
+                    
                 </div>
             </div>
         )
@@ -42,4 +49,4 @@ class WeatherCard extends Component {
 
 }
 
-export default WeatherCard
+export default NewsCard

@@ -19,11 +19,6 @@
     margin-bottom: 15px !important;
 }
 
-.weather-city {
-    font-size: 22px;
-    pointer-events: none;
-}
-
 .weather-img-container {
     max-width: 200px !important;
     overflow: hidden;
